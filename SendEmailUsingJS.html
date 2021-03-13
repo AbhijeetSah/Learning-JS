@@ -1,0 +1,42 @@
+<!-- 
+sender should change 
+Revoke 2-step verification
+Enabling less secure apps to access Gmail. You can easily do this by clicking on the link Enable
+
+-->
+
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+  <title>Send Mail</title> 
+  <script src= 
+    "https://smtpjs.com/v3/smtp.js"> 
+  </script> 
+  
+  <script type="text/javascript"> 
+    function sendEmail() { 
+      Email.send({ 
+        Host: "smtp.gmail.com", 
+        Username: "abhijeet.sah5895@gmail.com", 
+        Password: "yourpassword",  
+        To: 'receiveremail', 
+        From: "abhijeet.sah5895@gmail.com", 
+        Subject: "Sending Email using javascript", 
+        Body: "Well that was easy!!", 
+      }) 
+        .then(function (message) { 
+          alert("mail sent successfully") 
+        }); 
+    } 
+  </script> 
+</head> 
+  
+<body> 
+  <form method="post"> 
+    <input type="button" value="Send Email" 
+        onclick="sendEmail()" /> 
+  </form> 
+</body> 
+  
+</html> 
